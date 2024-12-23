@@ -9,7 +9,7 @@ import (
 )
 
 type HTTPServer struct {
-	Address string
+	Address string `yaml:"address" env:"ADDRESS" env-default:"localhost:8080"`
 }
 
 // env-default:"production" will be used if ENV is not set
